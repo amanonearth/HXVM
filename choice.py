@@ -9,7 +9,6 @@ from rich.prompt import Prompt
 
 def choicepy():
     vmnum = Prompt.ask("[+] How many Virtual Machines do you want to run on your system? ", choices=["1", "2", "3", "4", "5"])
-    # vmnum = input("[+] How many Virtual Machines do you want to run on your system? ")
     vmnumint = int(vmnum)
     print("\n")
     if vmnumint <= 5:
@@ -24,7 +23,6 @@ def choicepy():
         console = Console()
         console.print(table)
         print("\n")
-        # print(f"Please select any " + vmnum + " options:")
         print(Panel.fit(f"Please select any " + vmnum + " options:"))
 
         for i in range(0, vmnumint):
